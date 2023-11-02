@@ -13,7 +13,7 @@ public interface IOperatorService {
 
 	void deleteOperator(Long id);
 
-	Operator updateOperator(Operator operator);
+	//Operator updateOperator(Operator operator);
 
 	Operator retrieveOperator(Long id);
 

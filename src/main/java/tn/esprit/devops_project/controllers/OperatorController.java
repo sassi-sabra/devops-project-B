@@ -33,10 +33,10 @@ public class OperatorController {
 		operatorService.deleteOperator(operatorId);
 	}
 
-	@PutMapping("/operator")
-	public Operator modifyOperateur(@RequestBody Operator operator) {
-		return operatorService.updateOperator(operator);
-	}
+	//@PutMapping("/operator")
+	//public Operator modifyOperateur(@RequestBody Operator operator) {
+	//	return operatorService.updateOperator(operator);
+	//}
 
 	
 }
