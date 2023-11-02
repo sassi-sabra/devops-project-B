@@ -12,6 +12,7 @@ import tn.esprit.devops_project.repositories.OperatorRepository;
 import tn.esprit.devops_project.repositories.SupplierRepository;
 import tn.esprit.devops_project.services.Iservices.IInvoiceService;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -52,15 +53,14 @@ public class InvoiceServiceImpl implements IInvoiceService {
 	}
 
 	@Override
-	public void assignOperatorToInvoice(Long idOperator, Long idInvoice) {
+	public Operator assignOperatorToInvoice(Long idOperator, Long idInvoice) {
 		Invoice invoice = invoiceRepository.findById(idInvoice).orElseThrow(() -> new NullPointerException("Invoice not found"));
 		Operator operator = operatorRepository.findById(idOperator).orElseThrow(() -> new NullPointerException("Operator not found"));
 		operator.getInvoices().add(invoice);
-		operatorRepository.save(operator);
+		return operatorRepository.save(operator);
 	}
 
-	@Override
-	public float getTotalAmountInvoiceBetweenDates(Date startDate, Date endDate) {
+	public float getTotalAmountInvoiceBetweenDates(LocalDate startDate, LocalDate endDate) {
 		return invoiceRepository.getTotalAmountInvoiceBetweenDates(startDate, endDate);
 	}
 
