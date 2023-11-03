@@ -6,7 +6,7 @@ COPY src/ src/
 RUN --mount=type=cache,target=/root/.m2 mvn package
 
 # Stage 2: Create the runtime container
-FROM openjdk:8-jre-slim
+FROM openjdk:11-jre-slim
 EXPOSE 8082
 COPY --from=builder /app/target/DevOps_Project-1.0.jar /DevOps_Project-1.0.jar
 ENV JAVA_OPTS="-Dlogging.level.org.springframework.security=DEBUG -Djdk.tls.client.protocols=TLSv1.2"
