@@ -1,0 +1,30 @@
+version: '3'
+services:
+  backend:
+    image: sabrakr/alpine:1.0  # Utilisez l'image Docker de votre application
+    container_name: backend
+    ports:
+      - 8055:8082  # Port de votre application ( 8055 container port // 8082 port app)
+    environment:
+      MYSQL_HOST: mysqldb     #container sql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+
+
+
+  mysql:
+    image: mysql
+    container_name: mysqldb
+    volumes:
+      - /home/user/Desktop/db:/var/lib/mysql
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: DBjenkins
+      MYSQL_ROOT_PASSWORD: root
+
+
+
+
+
