@@ -1,7 +1,7 @@
 version: '3'
 services:
   backend:
-    image: sabrakr/alpine:1.0  # Utilisez l'image Docker de votre application
+    image: sabrakr/alpine:1.0-backend  # Utilisez l'image Docker de votre application
     container_name: backend
     ports:
       - 8055:8082  # Port de votre application ( 8055 container port // 8082 port app)
