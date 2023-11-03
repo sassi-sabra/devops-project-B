@@ -1,4 +1,4 @@
-FROM openjdk:11-alpine
+FROM openjdk:12-alpine
 
 COPY target/DevOps_Project-*.jar /devops.jar
 
