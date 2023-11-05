@@ -1,4 +1,4 @@
-package tn.esprit.devops_project.services.test;
+package tn.esprit.devops_project.services;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+
 public class SupplierServiceImplTest {
 
     @InjectMocks
@@ -57,6 +57,8 @@ public class SupplierServiceImplTest {
         List<Supplier> result = supplierService.retrieveAllSuppliers();
 
         assertEquals(2, result.size());
+
+        System.err.println("Test SUCCESS");
     }
 
 //    @Test

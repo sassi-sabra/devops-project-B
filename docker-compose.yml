@@ -27,6 +27,14 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
 
+  angular:
+    image: sabrakr/alpine:1.0-frontend
+    container_name: angular
+    ports:
+      - 4201:4200
+    volumes:
+      - /DevOps_Project_Front\dist\summer-workshop-angular:/usr/share/nginx/html
+
 
 
 
