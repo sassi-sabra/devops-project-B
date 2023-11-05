@@ -23,7 +23,7 @@ import static org.mockito.Mockito.when;
 
 @RunWith(SpringRunner.class)
 
-public class SupplierServiceImplTest {
+public class SuppTest {
 
     @InjectMocks
     private SupplierServiceImpl supplierService;
