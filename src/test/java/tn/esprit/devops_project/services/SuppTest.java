@@ -1,4 +1,4 @@
-package s;
+package tn.esprit.devops_project.services;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
